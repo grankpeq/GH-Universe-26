@@ -8,6 +8,7 @@ Use this repository as a reference for team discussions, technology evaluations,
 
 | Session | Overview |
 | --- | --- |
+| [💬 Pre-Keynote: GitHub Universe](./pre-keynote-github-universe.md) | Panel perspectives on changing developer roles, agent orchestration, and open-source collaboration. |
 | [🎤 Keynote: GitHub Universe](./keynote-github-universe.md) | Copilot App, Copilot Fusion, Copilot Projects, agentic workflows, security features, and Git infrastructure. |
 | [🧭 Agentic Engineering Past the Pilot](./agentic-engineering-past-the-pilot.md) | Applying agents across the SDLC, improving verification, and coordinating parallel work. |
 | [🏭 The Factory Mindset: Agentic Workflows in Production](./factory-mindset-agentic-workflows-in-production.md) | Repeatable agent workflows, control planes, governance, observability, and regulated environments. |
@@ -18,7 +19,6 @@ Use this repository as a reference for team discussions, technology evaluations,
 | [⚡ Four Days, Zero Lines: The AI Force Multiplier](./four-days-zero-lines-ai-force-multiplier.md) | Policy-as-code automation and a human-guided approach to repository compliance. |
 | [🚀 The Low Orbit Agentic Cannon](./low-orbit-agentic-cannon-scaling-copilot.md) | Coordinating large-scale repository changes and reducing friction in developer workflows. |
 | [🛡️ Eliminating 90% of Enterprise AppSec Risk](./eliminating-90-percent-appsec-risk.md) | Repository ownership metadata, developer-focused security tooling, remediation, and reporting. |
-| [💬 Pre-Keynote: GitHub Universe](./pre-keynote-github-universe.md) | Panel perspectives on changing developer roles, agent orchestration, and open-source collaboration. |
 | [🔎 Secret Scanning Automation Plan](./secret-scanning-automation-plan.md) | Triage and remediation considerations for large volumes of secret-scanning alerts. |
 
 ## 🧩 Topics covered
