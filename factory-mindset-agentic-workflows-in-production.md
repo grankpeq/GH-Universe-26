@@ -1,8 +1,5 @@
 # The Factory Mindset: Agentic Workflows in Production
 
-## Private Notes
-- `#How to get control plane for approve workflows?`
-
 ## Summary
 ### The Factory Mindset: Agentic Workflows in Production
 Three speakers presented: a GitHub/Agentix team member (Speaker A), Tim Mason (Principal Engineer at Martin Spencer), and Paul Snoyder (CTO at Probation/Children’s Hospital).
@@ -78,8 +75,10 @@ Core thesis: shift from writing code to engineering the *processes* that let age
 
 ### Enterprise Conversation: The Workflow Control Plane
 - Specify the control plane’s minimum capabilities before adopting or building one: approved workflow catalog, versioned templates, repository eligibility, staged rollout, policy checks, deployment status, audit history, and rollback.
+- Start by inventorying existing workflow owners, policy checks, and deployment mechanisms. Decide whether the control plane should extend the current platform or integrate an existing approved-workflow catalog before creating a new service.
 - Use centrally maintained workflow definitions with explicit compatibility and ownership. Allow repository-specific configuration only through validated inputs so local variation does not silently weaken shared controls.
 - Issue short-lived, narrowly scoped identities at runtime. Separate read, branch-write, issue/PR, and merge permissions; keep production credentials outside agent-accessible contexts unless a reviewed workflow requires them.
 - Set deterministic boundaries for tool access, network egress, spend, execution time, retries, and human approvals. Record the workflow version, model/tool configuration, inputs, outputs, and approvals for each run.
+- Make enrollment a reviewed, pull-request-based change with preflight checks, an explicit workflow owner, and a visible approval record. Provide operators a way to pause a workflow or roll back its deployed version.
 - Define an evaluation gate for catalog admission: representative test repositories, security review, failure-mode testing, cost measurement, and a named service owner.
 - Scale by cohort and measure successful completion, review effort, defect escape rate, failure recovery time, and cost per accepted change. In regulated healthcare contexts, also review data minimization, retention, access logging, and required human sign-offs.

@@ -1,9 +1,5 @@
 # Agentic Engineering Past the Pilot: An Enterprise Playbook
 
-## Private Notes
-- `#Integrate ADR info into notes for structure of workflows`
-- `#AI Secret Detection expand on this`
-
 ## Summary
 ### Context and the Productivity Gap
 - GitHub saw 236M commits/week at Universe 2025
@@ -56,7 +52,7 @@
   - Max: deep analysis for large/complex PRs (as seen in keynote)
   - Auto mode shipping soon: Copilot automatically selects the right tier per PR
 
-### AI Secret Detection — Expand on This
+### AI Secret Detection and Supply-Chain Controls
 - Secret scanning shipping as GA, surfaced directly in pull requests
 - Package firewall also shipping as GA: protects against dependency/supply chain risks
 - Goal: agents and humans held to the same code quality and security standards
@@ -74,8 +70,10 @@
 
 ### Enterprise Conversation: Move From Pilot to Governed Delivery
 - Map the current delivery workflow before introducing agents: identify where planning, review, testing, security approval, or environment access creates measurable delays.
-- Keep ADRs and human approval meaningful. Require the agent to produce traceable artifacts—assumptions, alternatives, affected systems, test evidence, and unresolved risks—before work advances to implementation.
+- Use agents to prepare, not replace, architecture decision records. Require a concise problem statement, constraints, alternatives considered, impact analysis, decision owner, and unresolved risks; keep the accountable human approval before implementation begins.
 - Pilot parallel agents in isolated workspaces and establish repository-level boundaries for write access, network egress, data access, and credential issuance. Treat isolation as a control to validate, not an assurance by itself.
 - Define a verification policy by change risk: expected tests and scans, reviewer responsibility, escalation rules, and explicit conditions that prevent automated merge.
 - Evaluate Memory, Dreaming, and model routing for data retention, access scope, change review, quality, latency, and cost. Review suggested context changes as code and provide a way to reject or roll them back.
 - Baseline the bottleneck before scaling: track PR review time, unreviewed PRs, change failure rate, rework, lead time, and spend per successfully delivered change. Validate conference-reported results in the organization’s own environment.
+- Treat AI-assisted secret detection as one layer in defense in depth. Validate supported credential types, detection coverage, false-positive handling, alert latency, and the remediation path; retain push protection, secret scanning, credential rotation, and incident response controls.
+- Apply equivalent security gates to agent-authored and human-authored changes. Require dependency and secret checks on proposed changes, and ensure any automated remediation still receives normal test and review evidence.

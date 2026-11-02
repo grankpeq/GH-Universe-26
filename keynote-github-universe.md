@@ -1,11 +1,5 @@
 # Keynote - GitHub Universe
 
-## Private Notes
-- `#Explain teh CoPilot Fusion add more context here this is important.`
-- `#Copilot app highlight this`
-- `#Copilot Projects we need more info on this`
-- `#Copilot Fusion create more context in notes`
-
 ## Summary
 ### GitHub Universe: Scale and the Agentic Era
 - 225 million developers on GitHub, spanning every country
@@ -32,7 +26,7 @@
   - Opens a PR with cleaned-up instructions for review, just like any other code change
   - Memories capture personal preferences and team practices for more tailored outputs
 
-### Copilot Fusion: Need More Context Here, This Is Important
+### Copilot Fusion
 - Coordinates between multiple models to deliver frontier-level results at lower cost
 - Automatically selects the optimal execution pattern per task:
   - Three modes: single, cascade, or critique
@@ -40,9 +34,8 @@
   - Within 2 points of Opus 5.5 Max
   - Achieved at half the cost per task and 40% less time per task
 - Promotion: 30% off Fusion usage through end of November 2026
-- Need to understand more about how Fusion decides which execution pattern to use and when cascade vs. critique is triggered
 
-### Copilot Projects: Need More Info on This
+### Copilot Projects
 - Set a goal across one or many repos; Copilot spins up as many agents as needed
   - Agents assigned per repo based on where the task lives
 - Additional context (Slack threads, design mocks, Teams call recordings) can be sent mid-session
@@ -52,7 +45,6 @@
 - Agents run locally or in the cloud (laptop can be closed)
 - PRs surface automatically in the project overview as agents complete work
 - Announced as generally available today
-- Need more detail on: pricing model, agent limits per project, and how the orchestrator handles conflicting context
 
 ### Quality, Security, and Continuity
 - Session continuity across phone, app, VS Code, CLI, and .com via the same Copilot harness
@@ -99,8 +91,10 @@
 
 ### Enterprise Conversation: Validate Fit Before Broad Adoption
 - Verify current availability, licensing, credit consumption, data handling, and administrative controls for each announced capability. Treat keynote statements and benchmark comparisons as claims to validate, not procurement assumptions.
-- For Copilot Fusion, compare the organization’s representative tasks across quality, latency, cost, and failure modes. Establish when orchestration is appropriate and how teams can inspect or override the selected execution path.
-- For Copilot Projects and Automations, define project boundaries, repository permissions, approval requirements, concurrency limits, spend ceilings, and stop conditions before enabling multi-repository work.
+- For Copilot Fusion, compare representative tasks across quality, latency, cost, and failure modes. Ask the vendor how single, cascade, and critique modes are selected, what task or data signals influence routing, whether routing can be inspected or controlled, and how behavior changes across models or plan tiers.
+- For Copilot Projects, clarify current pricing and credit accounting, agent and concurrency limits, supported repository boundaries, and how conflicting instructions or mid-session context are reconciled. Pilot with non-production repositories and inspect proposed changes before enabling broad access.
+- Define project boundaries, repository permissions, approval requirements, concurrency limits, spend ceilings, and stop conditions before enabling multi-repository work or automations.
 - Assess session continuity and connectors against enterprise identity, device management, data residency, retention, and audit requirements. Limit connected services to approved use cases and least-privilege scopes.
+- For the Copilot App, review connector scopes, session isolation, custom canvas permissions, and where session artifacts are stored. Confirm whether each control applies consistently across desktop, cloud, mobile, and integrated services.
 - Evaluate Code Review and Agent Merge using a risk-tiered rollout: measure missed high-severity issues, false positives, reviewer workload, CI reliability, and the proportion of changes still receiving accountable human approval.
 - Treat new Git infrastructure capacity claims as platform context, not a substitute for testing the organization’s own workload, availability requirements, and recovery expectations.

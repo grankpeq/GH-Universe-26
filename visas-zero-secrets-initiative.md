@@ -1,16 +1,5 @@
 # Visa’s Zero Secrets Initiative: No Hardcoded Secrets, No Exceptions
 
-## Private Notes
-- `#Visa Harness in GitHub to help with security`
-- `#Using CMDB with Custom Properties for App data`
-- `#Using Chatbot to help respond to developers`
-- `#Flow - GHAS > Combine Custom Properties with CMDB > Creates ticket in SNOW?`
-- `#Fix Finding before archival of repo`
-- `#Verification model we don’t do direct dismissal there is a check that ensures it’s actually fixed. Maybe an AI review of the file to ensure remediation is done to remove from source code?`
-- `#Attestation stage and credibility of the fix when dismissing using in house LLM`
-- `#Need a bot to validate dismissal that checks files and removal of secret`
-- `#For bit the developer needs to state in the attention comment that it’s been rotated or revoked and removed from source`
-
 ## Summary
 ### Visa Harness in GitHub to Help with Security
 - Visa uses GitHub Advanced Security (GHAS) across multiple GitHub instances: Enterprise Server (on-prem), SaaS, and open source enterprise
@@ -84,8 +73,12 @@
 
 ### Enterprise Conversation: Automate Verification With Defensible Evidence
 - Adapt the workflow to the organization’s identity, source-control topology, CMDB quality, and incident-response process; validate each integration and ownership rule before applying it enterprise-wide.
+- A practical integration sequence is: enforce required repository-to-application metadata, ingest GHAS alerts, enrich findings from the CMDB, calculate priority and ownership, create or update the ServiceNow record, and synchronize status back to the source alert. Define data contracts, retry behavior, and reconciliation for every handoff.
+- Treat repository custom properties as governed CMDB references, not free-form labels. Validate identifiers at repository creation and on a schedule, and provide a clear owner and correction path for missing or stale application data.
+- Offer developers policy guidance through an approved chatbot or self-service channel that can explain remediation steps and route exceptions to a human. Limit its knowledge and permissions; it should not dismiss alerts or reveal credential values.
+- Require the archive process to check unresolved findings before completing archival. Preserve the finding and its owner through the repository lifecycle so archiving cannot silently erase accountability.
 - Keep secret values out of tickets, chat, logs, model prompts, and dashboards. Pass stable alert references and minimum necessary metadata between systems, with access controls and retention limits.
-- Treat developer attestations and LLM assessments as supporting evidence, not proof that a credential is safe. Require verifiable removal and revocation evidence from authoritative systems where available, with human escalation for uncertain cases.
+- Use a verification workflow before closure: confirm removal from applicable active source locations, verify rotation or revocation with the issuing system when possible, and record a developer attestation that clearly states both actions. A policy-tuned LLM may check whether the attestation is complete, but must not be the sole evidence or decision-maker.
 - Define how the process handles multi-location exposure, history, forks, generated artifacts, replicas, and systems without a reliable liveness check. Alert closure should not imply that historical exposure or incident-response obligations have ended.
-- Make automated ownership and severity explainable, auditable, and correctable. Provide a dispute path and monitor misassignment, delayed tickets, false dismissals, and false-positive rates.
+- Make automated ownership and severity explainable, auditable, and correctable. Record which ownership rule matched, provide a dispute path and human escalation, and monitor misassignment, delayed tickets, false dismissals, and false-positive rates.
 - Pilot with a narrow set of repositories and credential types. Use failure injection and audit review to verify that failed checks keep findings open and that bypasses, archive requests, and exceptions receive equivalent scrutiny.
